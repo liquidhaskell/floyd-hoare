@@ -1,0 +1,35 @@
+cabal-version: 1.12
+
+name:           henzinger60
+version:        0.1.0.0
+description:    Code accompanying the Henzinger60 paper.
+homepage:
+bug-reports:
+author:         Ranjit Jhala 
+maintainer:     jhala@cs.ucsd.edu
+copyright:      2021 Ranjit Jhala 
+license:        MIT 
+license-file:   LICENSE
+build-type:     Simple
+
+library
+  exposed-modules:
+      Refinements
+      State
+      Programs
+      FloydHoare
+      Verifier
+      Examples
+      Proof.FH
+      Proof.VC
+  hs-source-dirs:
+      src
+  build-depends:
+      liquid-ghc-prim,
+      liquid-base,
+      liquid-prelude,
+      liquid-containers,
+      liquidhaskell
+
+  default-language: Haskell2010
+  ghc-options: -fplugin=LiquidHaskell
